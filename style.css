@@ -1,9 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: "Dancing Script", cursive;
 }
 
-body {
-	background-color: rgb(25, 63, 119);
+.container {
+	width: 100%;
+	background-image: radial-gradient(
+		circle farthest-corner at 20.3% 14.5%,
+		rgb(10, 42, 75) 0%,
+		rgb(3, 29, 51) 40%,
+		rgb(1, 12, 24) 100%
+	);
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+}
+
+.col {
+	display: flex;
+	flex-basis: 50%;
+}
+
+.moon-cnt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	transform: translate(50px);
+	padding-top: 40px;
+	z-index: 4;
+}
+
+.moon {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background: radial-gradient(
+		rgb(255, 255, 255),
+		rgb(255, 255, 255),
+		rgb(255, 255, 255),
+		rgb(190, 190, 190)
+	);
+	box-shadow: 0 0 50px 0 white;
+}
+
+.moon::before {
+	content: "";
+	width: 140px;
+	height: 80px;
+	border-radius: 50%;
+	background: rgba(160, 160, 160, 0.05);
+	position: absolute;
+	top: 64%;
+	left: 48%;
+	transform: rotate(-40deg);
+	box-shadow: inset 0 0 10px 0 rgba(128, 128, 128, 0.311);
+}
+
+.moon::after {
+	content: "";
+	width: 100px;
+	height: 50px;
+	border-radius: 50%;
+	background: rgba(160, 160, 160, 0.05);
+	position: absolute;
+	top: 3%;
+	left: 20%;
+	transform: rotate(-20deg);
+	box-shadow: inset 0 0 10px 0 rgba(145, 145, 145, 0.311);
+}
+
+img {
+	position: absolute;
+	top: 18%;
+	left: 3%;
+	z-index: 10;
+}
+
+.container h1 {
+	padding-top: 10%;
+	padding-left: 10%;
+	font-size: 45px;
+	color: rgb(208, 236, 255);
 }
